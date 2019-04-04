@@ -22,15 +22,6 @@ public class 对链表进行插入排序 {
         return dummyHead.next;
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public static void main(String[] args) {
         ListNode listNode = new ListNode(4);
         ListNode listNode1 = new ListNode(2);

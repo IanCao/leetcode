@@ -23,14 +23,6 @@ package middle.链表;
  * 直至其中一个头为NULL，处理剩下的元素。最后返回记录的头即可。
  */
 public class 排序链表 {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public static ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {

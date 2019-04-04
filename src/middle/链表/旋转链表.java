@@ -15,14 +15,6 @@ package middle.链表;
  * 向右旋转 2 步: 4->5->1->2->3->NULL
  */
 public class 旋转链表 {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public static ListNode rotateRight(ListNode head, int k) {
         if (head == null || head.next == null || k <= 0) {
@@ -60,13 +52,7 @@ public class 旋转链表 {
 //        listNode3.next = listNode4;
 
         ListNode result = rotateRight(listNode, 4);
-        println(result);
+        ListNode.println(result);
     }
 
-    private static void println(ListNode listNode) {
-        while (listNode != null) {
-            System.out.println(listNode.val);
-            listNode = listNode.next;
-        }
-    }
 }

@@ -12,13 +12,6 @@ package middle.链表;
  * 输出:        1->2->2->4->3->5
  */
 public class 分隔链表 {
-    public class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-        }
-    }
     public ListNode partition(ListNode head, int x) {
         return null;
     }

@@ -11,14 +11,6 @@ package middle.链表;
  * 输出: 1->2->5
  */
 public class 删除排序链表中的重复元素2 {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public static ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) {
@@ -67,14 +59,6 @@ public class 删除排序链表中的重复元素2 {
         listNode5.next = listNode6;
 
         ListNode result = deleteDuplicates(listNode);
-        println(result);
+        ListNode.println(result);
     }
-
-    private static void println(ListNode listNode) {
-        while (listNode != null) {
-            System.out.println(listNode.val);
-            listNode = listNode.next;
-        }
-    }
-
 }

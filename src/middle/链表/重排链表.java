@@ -17,15 +17,6 @@ package middle.链表;
  * 思路：先用快慢指针获取链表中心，然后反转后面的链表，进行整合
  */
 public class 重排链表 {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public static void reorderList(ListNode head) {
         if (head == null || head.next == null) {
             return;
@@ -78,13 +69,6 @@ public class 重排链表 {
 //        listNode3.next = listNode4;
 
         reorderList(listNode);
-        println(listNode);
-    }
-
-    private static void println(ListNode listNode) {
-        while (listNode != null) {
-            System.out.println(listNode.val);
-            listNode = listNode.next;
-        }
+        ListNode.println(listNode);
     }
 }
