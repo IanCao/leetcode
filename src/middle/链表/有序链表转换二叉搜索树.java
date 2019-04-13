@@ -26,6 +26,7 @@ public class 有序链表转换二叉搜索树 {
             val = x;
         }
     }
+
     public class TreeNode {
         int val;
         TreeNode left;
@@ -36,6 +37,19 @@ public class 有序链表转换二叉搜索树 {
     }
 
     public TreeNode sortedListToBST(ListNode head) {
-        return null;
+        if (head == null || head.next == null) {
+            return head == null ? null : new TreeNode(head.val);
+        }
+        ListNode pre = head, mid = head, mid_next = head;
+        while (mid_next != null && mid_next.next != null) {// 快慢指针法找到中间节点
+            pre = mid;
+            mid = mid.next;
+            mid_next = mid_next.next.next;
+        }
+        pre.next = null; // 断链
+        TreeNode root = new TreeNode(mid.val); // 构造根节点，左右子节点DSF
+        root.left = sortedListToBST(head);
+        root.right = sortedListToBST(mid.next);
+        return root;
     }
 }
