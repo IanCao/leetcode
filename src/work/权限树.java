@@ -21,20 +21,20 @@ public class 权限树 {
             add("13222222");
         }};
 
-        AuthNode root = new AuthNode("0", "0");
+        final AuthNode root = new AuthNode("0", "0");
 
-        AuthNode node11 = new AuthNode("11", "11");
-        AuthNode node111 = new AuthNode("111", "111");
-        AuthNode node112 = new AuthNode("112", "112");
+        final AuthNode node11 = new AuthNode("11", "11");
+        final AuthNode node111 = new AuthNode("111", "111");
+        final AuthNode node112 = new AuthNode("112", "112");
 
-        AuthNode node12 = new AuthNode("12", "12");
+        final AuthNode node12 = new AuthNode("12", "12");
 
-        AuthNode node13 = new AuthNode("13", "13");
-        AuthNode node131 = new AuthNode("131", "131");
-        AuthNode node1311 = new AuthNode("1311", "1311");
-        AuthNode node1312 = new AuthNode("1312", "1312");
+        final AuthNode node13 = new AuthNode("13", "13");
+        final AuthNode node131 = new AuthNode("131", "131");
+        final AuthNode node1311 = new AuthNode("1311", "1311");
+        final AuthNode node1312 = new AuthNode("1312", "1312");
 
-        AuthNode node132 = new AuthNode("132", "132");
+        final AuthNode node132 = new AuthNode("132", "132");
 
 
         root.setAuthNodes(new ArrayList<AuthNode>() {{

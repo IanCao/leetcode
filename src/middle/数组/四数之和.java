@@ -1,8 +1,6 @@
 package middle.数组;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author caoyixiong
@@ -19,11 +17,13 @@ import java.util.List;
  * [-2, -1, 1, 2]
  * [-2,  0, 0, 2
  * ]
+ *
+ * [-2,-1,1,2]
  */
 public class 四数之和 {
-    public List<List<Integer>> fourSum(final int[] nums, int target) {
+    public static List<List<Integer>> fourSum(final int[] nums, int target) {
         Arrays.sort(nums);
-        List<List<Integer>> result = new ArrayList<>();
+        Set<List<Integer>> results = new HashSet<>();
         for (int i = 0; i < nums.length - 3; i++) {
             for (int j = i + 1; j < nums.length - 2; j++) {
                 int l = j + 1, r = nums.length - 1;
@@ -35,7 +35,9 @@ public class 四数之和 {
                         list.add(nums[j]);
                         list.add(nums[l]);
                         list.add(nums[r]);
-                        result.add(list);
+                        results.add(list);
+                        l++;
+                        r--;
                     } else if (sum > target) {
                         r--;
                     } else {
@@ -44,8 +46,20 @@ public class 四数之和 {
                 }
             }
         }
-        return result;
+        return new ArrayList<>(results);
     }
 
+    public static void main(String[] args) {
+        println(fourSum(new int[]{-3, -2, -1, 0, 0, 1, 2, 3}, 0));
+    }
+
+    private static void println(List<List<Integer>> lists) {
+        for (List<Integer> integers : lists) {
+            for (Integer integer : integers) {
+                System.out.print(integer + " ");
+            }
+            System.out.println();
+        }
+    }
 }
 
